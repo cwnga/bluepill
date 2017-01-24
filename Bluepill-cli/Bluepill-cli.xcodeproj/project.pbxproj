@@ -74,6 +74,8 @@
 		BAD558D51DB6DCB100C9A5CD /* BPTreeObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A564C0A1DA817DE001BCEC2 /* BPTreeObjects.m */; };
 		BAD558D61DB6DCB100C9A5CD /* BPTreeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A564C0C1DA817DE001BCEC2 /* BPTreeParser.m */; };
 		BAD558D71DB6DCB100C9A5CD /* BPWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A202A401DB0066100D935E3 /* BPWriter.m */; };
+		BAFCCA6B1E36E96200E33C31 /* BPTestManagerCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFCCA6A1E36E96200E33C31 /* BPTestManagerCoordinator.m */; };
+		BAFCCA6C1E36E96200E33C31 /* BPTestManagerCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFCCA6A1E36E96200E33C31 /* BPTestManagerCoordinator.m */; };
 		C41A2C721E0B2497005D9751 /* BPXCTestFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C41A2C711E0B2497005D9751 /* BPXCTestFile.m */; };
 		C41A2C771E0B24E8005D9751 /* BPTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C41A2C741E0B24E8005D9751 /* BPTestCase.m */; };
 		C41A2C781E0B24E8005D9751 /* BPTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C41A2C761E0B24E8005D9751 /* BPTestClass.m */; };
@@ -895,6 +897,8 @@
 		BAFCCA561E36DBA900E33C31 /* NSObject-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-Protocol.h"; sourceTree = "<group>"; };
 		BAFCCA571E36DBA900E33C31 /* NSSecureCoding-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSecureCoding-Protocol.h"; sourceTree = "<group>"; };
 		BAFCCA581E36DBA900E33C31 /* NSURLSessionDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionDelegate-Protocol.h"; sourceTree = "<group>"; };
+		BAFCCA691E36E96200E33C31 /* BPTestManagerCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTestManagerCoordinator.h; sourceTree = "<group>"; };
+		BAFCCA6A1E36E96200E33C31 /* BPTestManagerCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTestManagerCoordinator.m; sourceTree = "<group>"; };
 		C41A2C701E0B2497005D9751 /* BPXCTestFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPXCTestFile.h; sourceTree = "<group>"; };
 		C41A2C711E0B2497005D9751 /* BPXCTestFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPXCTestFile.m; sourceTree = "<group>"; };
 		C41A2C731E0B24E8005D9751 /* BPTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTestCase.h; sourceTree = "<group>"; };
@@ -975,6 +979,7 @@
 				BA954F551D6D1AB3007D011D /* PrivateHeaders */,
 				BA9552171D6D1C00007D011D /* Bluepill */,
 				BA34F5DB1D6D70300063B17F /* Simulator */,
+				BAFCCA681E36E92500E33C31 /* TestManager */,
 			);
 			path = "Bluepill-cli";
 			sourceTree = "<group>";
@@ -1876,6 +1881,15 @@
 			path = DTXConnectionServices;
 			sourceTree = "<group>";
 		};
+		BAFCCA681E36E92500E33C31 /* TestManager */ = {
+			isa = PBXGroup;
+			children = (
+				BAFCCA691E36E96200E33C31 /* BPTestManagerCoordinator.h */,
+				BAFCCA6A1E36E96200E33C31 /* BPTestManagerCoordinator.m */,
+			);
+			path = TestManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1987,6 +2001,7 @@
 				7A4FB8D41DF89A790073F268 /* BPUtils.m in Sources */,
 				7A7D66021DB679820015C937 /* BPStats.m in Sources */,
 				C41A2C781E0B24E8005D9751 /* BPTestClass.m in Sources */,
+				BAFCCA6B1E36E96200E33C31 /* BPTestManagerCoordinator.m in Sources */,
 				7A7E7BBC1DF21749007928F3 /* BPDeleteSimulatorHandler.m in Sources */,
 				BA34F5DE1D6D70650063B17F /* SimulatorRunner.m in Sources */,
 				7A7E7BB51DF2163F007928F3 /* BPHandler.m in Sources */,
@@ -2027,6 +2042,7 @@
 				BA180A091DBB00FA00D7D130 /* BPUtilsTests.m in Sources */,
 				7A4D7A871DDBB156001E085D /* BPExitStatus.m in Sources */,
 				BA1809B81DB89B5600D7D130 /* BluepillTests.m in Sources */,
+				BAFCCA6C1E36E96200E33C31 /* BPTestManagerCoordinator.m in Sources */,
 				BAD558D31DB6DC1C00C9A5CD /* SimulatorMonitor.m in Sources */,
 				7A7E7BC11DF22CE1007928F3 /* BPExecutionContext.m in Sources */,
 				BAD558D71DB6DCB100C9A5CD /* BPWriter.m in Sources */,
