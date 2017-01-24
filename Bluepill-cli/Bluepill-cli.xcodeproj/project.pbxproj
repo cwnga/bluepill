@@ -893,9 +893,6 @@
 		BAFCCA521E36DBA900E33C31 /* DTXSharedMemoryTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXSharedMemoryTransport.h; sourceTree = "<group>"; };
 		BAFCCA531E36DBA900E33C31 /* DTXSocketTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXSocketTransport.h; sourceTree = "<group>"; };
 		BAFCCA541E36DBA900E33C31 /* DTXTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXTransport.h; sourceTree = "<group>"; };
-		BAFCCA551E36DBA900E33C31 /* NSCoding-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCoding-Protocol.h"; sourceTree = "<group>"; };
-		BAFCCA561E36DBA900E33C31 /* NSObject-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-Protocol.h"; sourceTree = "<group>"; };
-		BAFCCA571E36DBA900E33C31 /* NSSecureCoding-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSecureCoding-Protocol.h"; sourceTree = "<group>"; };
 		BAFCCA581E36DBA900E33C31 /* NSURLSessionDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionDelegate-Protocol.h"; sourceTree = "<group>"; };
 		BAFCCA691E36E96200E33C31 /* BPTestManagerCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTestManagerCoordinator.h; sourceTree = "<group>"; };
 		BAFCCA6A1E36E96200E33C31 /* BPTestManagerCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTestManagerCoordinator.m; sourceTree = "<group>"; };
@@ -1883,9 +1880,6 @@
 				BAFCCA521E36DBA900E33C31 /* DTXSharedMemoryTransport.h */,
 				BAFCCA531E36DBA900E33C31 /* DTXSocketTransport.h */,
 				BAFCCA541E36DBA900E33C31 /* DTXTransport.h */,
-				BAFCCA551E36DBA900E33C31 /* NSCoding-Protocol.h */,
-				BAFCCA561E36DBA900E33C31 /* NSObject-Protocol.h */,
-				BAFCCA571E36DBA900E33C31 /* NSSecureCoding-Protocol.h */,
 				BAFCCA581E36DBA900E33C31 /* NSURLSessionDelegate-Protocol.h */,
 			);
 			path = DTXConnectionServices;
