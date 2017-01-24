@@ -40,9 +40,3 @@ struct __va_list_tag {
     void *_field3;
     void *_field4;
 };
-
-struct mach_timebase_info {
-    unsigned int numer;
-    unsigned int denom;
-};
-
