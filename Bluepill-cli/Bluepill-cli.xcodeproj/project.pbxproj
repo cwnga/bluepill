@@ -2185,16 +2185,6 @@
 				INFOPLIST_FILE = BPInstanceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "\"$(DEVELOPER_DIR)/Library/PrivateFrameworks\"";
 				OTHER_CFLAGS = "-DBP_USE_PRIVATE_FRAMEWORKS";
-				OTHER_LDFLAGS = (
-					"-weak_framework",
-					DVTFoundation,
-					"-weak_framework",
-					DVTiPhoneSimulatorRemoteClient,
-					"-framework",
-					CoreSimulator,
-					"-weak_framework",
-					XCTest,
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = LI.BPInstanceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
