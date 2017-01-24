@@ -12,18 +12,63 @@
 #import "XCTestManager_IDEInterface-Protocol.h"
 #import "XCTestManager_TestsInterface-Protocol.h"
 #import "XCTestManager_ManagerInterface-Protocol.h"
+#import "XCTestManager_DaemonConnectionInterface-Protocol.h"
 
 // DTX framework
 #import "DTXConnection.h"
 #import "DTXProxyChannel.h"
 #import "DTXRemoteInvocationReceipt.h"
 #import "DTXTransport.h"
+#import "DTXSocketTransport.h"
+
+// sys
+#import <sys/socket.h>
+#import <sys/un.h>
+
+// CoreSimulator
+#import "SimDevice.h"
+
+static const NSString * const testManagerEnv = @"TESTMANAGERD_SIM_SOCK";
 
 @interface BPTestManagerCoordinator() <XCTestManager_IDEInterface>
 
+@property (nonatomic, strong) SimDevice *device;
 @end
 
 @implementation BPTestManagerCoordinator
+
+- (void)connect {
+    // Get socket id to test manager rd
+    int socketFD = socket(AF_UNIX, SOCK_STREAM, 0);
+    NSString *socketString = [self.device getenv:testManagerEnv error:nil];
+    const char *socketPath = socketString.UTF8String;
+
+    struct sockaddr_un remote;
+    remote.sun_family = AF_UNIX;
+    strcpy(remote.sun_path, socketPath);
+    socklen_t length = (socklen_t)(strlen(remote.sun_path) + sizeof(remote.sun_family) + sizeof(remote.sun_len));
+    if (connect(socketFD, (struct sockaddr *)&remote, length) == -1) {
+        NSLog(@"ERROR!");
+    }
+
+    // Set up DTXTransport
+    DTXTransport *transport = [[DTXSocketTransport alloc] initWithConnectedSocket:socketFD disconnectAction:^{
+        NSLog(@"Connection failed");
+    }];
+
+    // Set up DTXConnection
+    DTXConnection *connection = [[DTXConnection alloc] initWithTransport:transport];
+    [connection registerDisconnectHandler:^{
+        NSLog(@"Disconnected");
+    }];
+    [connection resume];
+
+    DTXProxyChannel *channel = [connection
+                                makeProxyChannelWithRemoteInterface:@protocol(XCTestManager_DaemonConnectionInterface)
+                                exportedInterface:@protocol(XCTestManager_IDEInterface)];
+
+    [channel setExportedObject:self queue:dispatch_get_main_queue()];
+}
 
 #pragma mark - XCTestManager_IDEInterface protocol
 

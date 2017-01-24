@@ -902,6 +902,8 @@
 		BAFCCA6D1E36EB5500E33C31 /* XCTestManager_IDEInterface-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestManager_IDEInterface-Protocol.h"; sourceTree = "<group>"; };
 		BAFCCA6E1E36EB5500E33C31 /* XCTestManager_ManagerInterface-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestManager_ManagerInterface-Protocol.h"; sourceTree = "<group>"; };
 		BAFCCA6F1E36EB5500E33C31 /* XCTestManager_TestsInterface-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestManager_TestsInterface-Protocol.h"; sourceTree = "<group>"; };
+		BAFCCA701E37298B00E33C31 /* XCTestDriverInterface-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCTestDriverInterface-Protocol.h"; sourceTree = "<group>"; };
+		BAFCCA711E37298B00E33C31 /* XCTestManager_DaemonConnectionInterface-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCTestManager_DaemonConnectionInterface-Protocol.h"; sourceTree = "<group>"; };
 		C41A2C701E0B2497005D9751 /* BPXCTestFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPXCTestFile.h; sourceTree = "<group>"; };
 		C41A2C711E0B2497005D9751 /* BPXCTestFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPXCTestFile.m; sourceTree = "<group>"; };
 		C41A2C731E0B24E8005D9751 /* BPTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTestCase.h; sourceTree = "<group>"; };
@@ -1053,6 +1055,8 @@
 		BA34F5E51D6D78120063B17F /* XCTest */ = {
 			isa = PBXGroup;
 			children = (
+				BAFCCA701E37298B00E33C31 /* XCTestDriverInterface-Protocol.h */,
+				BAFCCA711E37298B00E33C31 /* XCTestManager_DaemonConnectionInterface-Protocol.h */,
 				BAFCCA6D1E36EB5500E33C31 /* XCTestManager_IDEInterface-Protocol.h */,
 				BAFCCA6E1E36EB5500E33C31 /* XCTestManager_ManagerInterface-Protocol.h */,
 				BAFCCA6F1E36EB5500E33C31 /* XCTestManager_TestsInterface-Protocol.h */,

@@ -4,9 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
-#import <DTXConnectionServices/DTXFileDescriptorTransport.h>
-
-@class NSArray, NSObject<OS_dispatch_semaphore>, NSObject<OS_dispatch_source>;
+#import "DTXFileDescriptorTransport.h"
 
 @interface DTXSocketTransport : DTXFileDescriptorTransport
 {
